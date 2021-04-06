@@ -923,6 +923,7 @@
 		C53C19731F38EADC008DB406 /* lt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = lt; path = lt.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C53C19751F38EADE008DB406 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C53C19771F38EAE4008DB406 /* ca */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C53C197A1F38EAEA008DB406 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C53F2F0720EBC95600D9798F /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C549F8311F17F2C5001A0A2D /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapboxMobileEvents.framework; path = Carthage/Build/iOS/MapboxMobileEvents.framework; sourceTree = "<group>"; };
 		C54C655120336F2600D338E0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -3676,7 +3677,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+<<<<<<< HEAD
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Mapbox.CarPlay-Example";
+=======
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mapbox.Example-CarPlay";
+>>>>>>> Implement support for CPTemplateApplicationSceneDelegate UIScene-based CarPlay on iOS 13 and above (#2832)
 				PRODUCT_NAME = Example;
 				PROVISIONING_PROFILE = "69c90fd8-c53b-41a4-ac73-5bc11068a49a";
 				PROVISIONING_PROFILE_SPECIFIER = "CarPlay Provisioning Profile";
@@ -3702,7 +3707,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+<<<<<<< HEAD
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Mapbox.CarPlay-Example";
+=======
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mapbox.Example-CarPlay";
+>>>>>>> Implement support for CPTemplateApplicationSceneDelegate UIScene-based CarPlay on iOS 13 and above (#2832)
 				PRODUCT_NAME = Example;
 				PROVISIONING_PROFILE = "69c90fd8-c53b-41a4-ac73-5bc11068a49a";
 				PROVISIONING_PROFILE_SPECIFIER = "CarPlay Provisioning Profile";

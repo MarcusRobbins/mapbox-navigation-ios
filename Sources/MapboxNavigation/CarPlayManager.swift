@@ -487,6 +487,7 @@ extension CarPlayManager: CPMapTemplateDelegate {
         navigationViewController.startNavigationSession(for: trip)
         navigationViewController.carPlayNavigationDelegate = self
         currentNavigator = navigationViewController
+        navigationViewController.modalPresentationStyle = .fullScreen
         
         carPlayMapViewController.present(navigationViewController, animated: true) { [weak self] in
             guard let self = self else { return }

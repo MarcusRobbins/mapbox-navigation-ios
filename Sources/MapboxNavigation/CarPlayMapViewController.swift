@@ -238,5 +238,4 @@ extension CarPlayMapViewController: StyleManagerDelegate {
         // TODO: Implement the ability to reload style.
     }
 }
-#endif
 

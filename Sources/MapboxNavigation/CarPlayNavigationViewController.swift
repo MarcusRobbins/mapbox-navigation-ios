@@ -3,7 +3,6 @@ import MapboxDirections
 import MapboxCoreNavigation
 import MapboxMaps
 
-#if canImport(CarPlay)
 import CarPlay
 
 /**
@@ -521,4 +520,3 @@ public extension CarPlayNavigationDelegate {
         logUnimplemented(protocolType: CarPlayNavigationDelegate.self, level: .debug)
     }
 }
-#endif
