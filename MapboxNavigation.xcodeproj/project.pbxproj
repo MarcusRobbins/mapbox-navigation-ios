@@ -430,6 +430,7 @@
 		F46FF187260277F7007CC0E0 /* DateComponentsFormatter+NavigationAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46FF186260277F7007CC0E0 /* DateComponentsFormatter+NavigationAdditions.swift */; };
 		E2CC18F4265FA28900D61CBC /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2CC18F3265FA28900D61CBC /* Cedar.framework */; };
 		F452634C25B2506A00F7A464 /* Turf.swift in Sources */ = {isa = PBXBuildFile; fileRef = F452634B25B2506A00F7A464 /* Turf.swift */; };
+		F43EE32A261F98DC0039D56F /* NavigationMapView+RoadAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43EE328261F98DC0039D56F /* NavigationMapView+RoadAnnotations.swift */; };
 		F4BF512E24EAD7A50066A49B /* FeedbackSubtypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BF512D24EAD7A50066A49B /* FeedbackSubtypeCollectionViewCell.swift */; };
 		F4C5A26F24EF1D16004ED0DD /* FeedbackSubtypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C5A26E24EF1D16004ED0DD /* FeedbackSubtypeViewController.swift */; };
 /* End PBXBuildFile section */
@@ -1107,6 +1108,7 @@
 		F46FF186260277F7007CC0E0 /* DateComponentsFormatter+NavigationAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateComponentsFormatter+NavigationAdditions.swift"; sourceTree = "<group>"; };
 		E2CC18F3265FA28900D61CBC /* Cedar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cedar.framework; path = "Carthage/Checkouts/mapbox-events-ios/Frameworks/Cedar.framework"; sourceTree = "<group>"; };
 		F452634B25B2506A00F7A464 /* Turf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turf.swift; sourceTree = "<group>"; };
+		F43EE328261F98DC0039D56F /* NavigationMapView+RoadAnnotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationMapView+RoadAnnotations.swift"; sourceTree = "<group>"; };
 		F4BF512D24EAD7A50066A49B /* FeedbackSubtypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackSubtypeCollectionViewCell.swift; sourceTree = "<group>"; };
 		F4C5A26E24EF1D16004ED0DD /* FeedbackSubtypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackSubtypeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1395,6 +1397,7 @@
 				35002D721E5F6C830090E733 /* Supporting files */,
 				AED6285522CBE4CE00058A51 /* ViewController+GuidanceCards.swift */,
 				8A092F9A25DEE81900CA7CF5 /* ViewController+FreeDrive.swift */,
+				F43EE328261F98DC0039D56F /* NavigationMapView+RoadAnnotations.swift */,
 				3577B877214FF35800094294 /* FavoritesList.swift */,
 				358D14651E5E3B7700ADE590 /* AppDelegate.swift */,
 				35379CFB21480BFB00FD402E /* AppDelegate+CarPlay.swift */,
@@ -2815,6 +2818,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				358D14681E5E3B7700ADE590 /* ViewController.swift in Sources */,
+				F43EE329261F98DC0039D56F /* NavigationMapView+RoadAnnotations.swift in Sources */,
 				C5D9800D1EFA8BA9006DBF2E /* CustomViewController.swift in Sources */,
 				AED6285622CBE4CE00058A51 /* ViewController+GuidanceCards.swift in Sources */,
 				8A092F9B25DEE81900CA7CF5 /* ViewController+FreeDrive.swift in Sources */,
@@ -2921,6 +2925,7 @@
 				C53F2EE720EBC95600D9798F /* WaypointConfirmationViewController.swift in Sources */,
 				C5DE4B6220F6B6B3007AFBE6 /* CustomStyles.swift in Sources */,
 				8A0D5DB725DF2A86006F0919 /* StyledFeature.swift in Sources */,
+				F43EE32A261F98DC0039D56F /* NavigationMapView+RoadAnnotations.swift in Sources */,
 				DA8805002316EAED00B54D87 /* ViewController+GuidanceCards.swift in Sources */,
 				8A092F9C25DEE81900CA7CF5 /* ViewController+FreeDrive.swift in Sources */,
 				35379CFD21480C0500FD402E /* AppDelegate+CarPlay.swift in Sources */,
