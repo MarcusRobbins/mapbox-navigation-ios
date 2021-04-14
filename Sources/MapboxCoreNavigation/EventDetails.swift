@@ -116,6 +116,8 @@ struct NavigationEventDetails: EventDetails {
     var rating: Int?
     var comment: String?
     var userId: String?
+    var name: String?
+    var version: String?
     var feedbackType: String?
     var description: String?
     var screenshot: String?
@@ -248,6 +250,8 @@ struct NavigationEventDetails: EventDetails {
         case rating
         case comment
         case userId
+        case name
+        case version
         case feedbackType
         case description
         case screenshot
@@ -306,6 +310,8 @@ struct NavigationEventDetails: EventDetails {
         try container.encodeIfPresent(arrivalTimestamp?.ISO8601, forKey: .arrivalTimestamp)
         try container.encodeIfPresent(comment, forKey: .comment)
         try container.encodeIfPresent(userId, forKey: .userId)
+        try container.encodeIfPresent(name, forKey: .name)
+        try container.encodeIfPresent(version, forKey: .version)
         try container.encodeIfPresent(feedbackType, forKey: .feedbackType)
         try container.encodeIfPresent(description, forKey: .description)
         try container.encodeIfPresent(screenshot, forKey: .screenshot)
