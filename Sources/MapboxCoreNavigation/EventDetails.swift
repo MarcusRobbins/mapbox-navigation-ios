@@ -115,10 +115,8 @@ struct NavigationEventDetails: EventDetails {
     var arrivalTimestamp: Date?
     var rating: Int?
     var comment: String?
-    var appMetadata: AppMetadata?
     var userId: String?
-    var name: String?
-    var version: String?
+    var appMetadata: [String: String?]? = nil
     var feedbackType: String?
     var description: String?
     var screenshot: String?
@@ -129,7 +127,7 @@ struct NavigationEventDetails: EventDetails {
     var totalTimeInForeground: TimeInterval
     var totalTimeInBackground: TimeInterval
     
-    init(dataSource: EventsManagerDataSource, session: SessionState, defaultInterface: Bool) {
+    init(dataSource: EventsManagerDataSource, session: SessionState, defaultInterface: Bool, withAppMetadata: Bool = false) {
         coordinate = dataSource.router.rawLocation?.coordinate
         startTimestamp = session.departureTimestamp ?? nil
         sdkIdentifier = defaultInterface ? "mapbox-navigation-ui-ios" : "mapbox-navigation-ios"
@@ -139,6 +137,14 @@ struct NavigationEventDetails: EventDetails {
         sessionIdentifier = session.identifier.uuidString
         originalRequestIdentifier = session.originalRoute.routeIdentifier
         requestIdentifier = dataSource.routeProgress.route.routeIdentifier
+        
+        if withAppMetadata {
+            appMetadata = [String: String?]()
+            appMetadata?["name"] = Bundle.main.bundleIdentifier
+            appMetadata?["version"] = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
+            appMetadata?["userId"] = UIDevice.current.identifierForVendor?.uuidString
+            appMetadata?["sessionId"] = session.identifier.uuidString
+        }
                 
         if let location = dataSource.router.rawLocation,
             let coordinates = dataSource.routeProgress.route.shape?.coordinates,
@@ -251,8 +257,7 @@ struct NavigationEventDetails: EventDetails {
         case rating
         case comment
         case userId
-        case name
-        case version
+        case appMetadata
         case feedbackType
         case description
         case screenshot
@@ -311,8 +316,7 @@ struct NavigationEventDetails: EventDetails {
         try container.encodeIfPresent(arrivalTimestamp?.ISO8601, forKey: .arrivalTimestamp)
         try container.encodeIfPresent(comment, forKey: .comment)
         try container.encodeIfPresent(userId, forKey: .userId)
-        try container.encodeIfPresent(name, forKey: .name)
-        try container.encodeIfPresent(version, forKey: .version)
+        try container.encodeIfPresent(appMetadata, forKey: .appMetadata)
         try container.encodeIfPresent(feedbackType, forKey: .feedbackType)
         try container.encodeIfPresent(description, forKey: .description)
         try container.encodeIfPresent(screenshot, forKey: .screenshot)
