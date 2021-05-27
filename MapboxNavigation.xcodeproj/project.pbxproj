@@ -3674,11 +3674,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-<<<<<<< HEAD
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Mapbox.CarPlay-Example";
-=======
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mapbox.Example-CarPlay";
->>>>>>> Implement support for CPTemplateApplicationSceneDelegate UIScene-based CarPlay on iOS 13 and above (#2832)
 				PRODUCT_NAME = Example;
 				PROVISIONING_PROFILE_SPECIFIER = "Navigation Example";
 				SWIFT_OBJC_BRIDGING_HEADER = "Example/Example-Swift-BridgingHeader.h";
@@ -3703,11 +3699,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-<<<<<<< HEAD
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Mapbox.CarPlay-Example";
-=======
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mapbox.Example-CarPlay";
->>>>>>> Implement support for CPTemplateApplicationSceneDelegate UIScene-based CarPlay on iOS 13 and above (#2832)
 				PRODUCT_NAME = Example;
 				PROVISIONING_PROFILE_SPECIFIER = "* AppStore";
 				SWIFT_OBJC_BRIDGING_HEADER = "Example/Example-Swift-BridgingHeader.h";
