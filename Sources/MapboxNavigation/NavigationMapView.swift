@@ -1792,8 +1792,6 @@ open class NavigationMapView: UIView {
 
         DispatchQueue.main.async {
             self.updateIntersectionAnnotationSet(startingEdge: startingEdge, roadGraph: roadGraph)
-            self.updateAnnotations(for: nil)
         }
-
     }
 }
