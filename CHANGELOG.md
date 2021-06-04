@@ -110,6 +110,7 @@
 * Fixed the moment of custom feedback event creation. ([#3049](https://github.com/mapbox/mapbox-navigation-ios/pull/3049))
 * Increased stability of unit tests by addressing sporadic failures. ([#3089](https://github.com/mapbox/mapbox-navigation-ios/pull/3089))([#3072](https://github.com/mapbox/mapbox-navigation-ios/pull/3072))
 * Fixed a retain cycle in `UserCourseView`. ([#3120](https://github.com/mapbox/mapbox-navigation-ios/issues/3120))
+* `NavigationEventsManager` now allows the application to include application metadata `NavigationEventsManager.userInfo` such as the application name and version in feedback events by including `userInfo` parameter of  `NavigationEventsManager.recordFeedback()`. ([#3007](https://github.com/mapbox/mapbox-navigation-ios/pull/3007)).
 
 ## v1.4.1
 
