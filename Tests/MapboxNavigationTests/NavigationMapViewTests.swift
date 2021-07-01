@@ -383,4 +383,12 @@ class NavigationMapViewTests: XCTestCase {
         
         wait(for: [featureQueryExpectation], timeout: 5.0)
     }
+    
+    func testNavigationMapViewCameraType() {
+        var navigationMapView = NavigationMapView(frame: .zero)
+        XCTAssertEqual(navigationMapView.navigationCamera.type, .mobile)
+        
+        navigationMapView = NavigationMapView(frame: .zero, navigationCameraType: .carPlay)
+        XCTAssertEqual(navigationMapView.navigationCamera.type, .carPlay)
+    }
 }
