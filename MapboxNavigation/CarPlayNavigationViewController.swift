@@ -61,6 +61,8 @@ public class CarPlayNavigationViewController: UIViewController, NavigationMapVie
      */
     @objc weak public var compassView: CarPlayCompassView!
     
+    @objc weak public var laneSigns: UIImageView!
+    
     /**
      The interface styles available for display.
      
@@ -140,6 +142,16 @@ public class CarPlayNavigationViewController: UIViewController, NavigationMapVie
         compassView.topAnchor.constraint(equalTo: view.safeTopAnchor, constant: 8).isActive = true
         compassView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -8).isActive = true
         
+        
+        var laneSigns = UIImageView()
+        view.addSubview(laneSigns)
+        self.laneSigns = laneSigns
+        laneSigns.translatesAutoresizingMaskIntoConstraints = false
+        laneSigns.topAnchor.constraint(equalTo: view.safeTopAnchor, constant: 10).isActive = true
+        laneSigns.leadingAnchor.constraint(equalTo: view.safeLeadingAnchor, constant: 10).isActive = true
+        laneSigns.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        laneSigns.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        
         styleObservation = mapView.observe(\.style, options: .new) { [weak self] (mapView, change) in
             guard change.newValue != nil else {
                 return
@@ -185,12 +197,25 @@ public class CarPlayNavigationViewController: UIViewController, NavigationMapVie
         
         mapView.enableFrameByFrameCourseViewTracking(for: 1)
     }
+    
+    private let contentInsetUpdateDelay = 10.0
+    private var shouldUpdateContentInset = true
 
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        if (isOverviewingRoutes) { return } // Don't move content when overlays change.
-        guard let mapView = mapView else { return }
-        mapView.contentInset = contentInset(forOverviewing: false)
+//        if (isOverviewingRoutes) { return } // Don't move content when overlays change.
+//        guard let mapView = mapView else { return }
+//        mapView.contentInset = contentInset(forOverviewing: false)
+        
+        if shouldUpdateContentInset {
+           shouldUpdateContentInset = false
+
+           DispatchQueue.main.asyncAfter(deadline: .now() + contentInsetUpdateDelay, execute: {
+               self.shouldUpdateContentInset = true
+               self.mapView?.contentInset = self.contentInset(forOverviewing: self.isOverviewingRoutes)
+           })
+       }
+        
     }
 
     func contentInset(forOverviewing overviewing: Bool) -> UIEdgeInsets {
